@@ -1,0 +1,124 @@
+* {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper-audio {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(158, 97, 179, 1) 32%, rgba(13, 145, 172, 1) 97%);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#wrapper-audio .box-thumbnail {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px #000;
+    animation: rolate 0.5s linear infinite;
+    animation-play-state: paused;
+}
+
+#wrapper-audio .box-thumbnail.active {
+    animation-play-state: running;
+}
+
+@keyframes rolate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#wrapper-audio .box-thumbnail .thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+#wrapper-audio .story-desc .story-name {
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 0px;
+    display: block;
+}
+
+#wrapper-audio .box-bar {
+    position: relative;
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#wrapper-audio .box-bar span {
+    font-size: 10px;
+    color: #fff;
+}
+
+#wrapper-audio .box-bar .bar {
+    width: 80%;
+    height: 4px;
+    background: #c7b5bb;
+    display: block;
+    border-radius: 2px;
+}
+
+#wrapper-audio .box-bar .bar::after {
+    content: "";
+    width: 10%;
+    height: 4px;
+    background: #8e44ad;
+    display: block;
+    border-radius: 2px;
+}
+
+#wrapper-audio .box-bar .status {
+    padding: 2px;
+    position: absolute;
+    top: 25px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+#wrapper-audio .btn-function {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#wrapper-audio .btn-function button {
+    color: #fff;
+    background: none;
+    border: none;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+
+#wrapper-audio .btn-function .svg-icon {
+    width: 25px;
+    fill: #fff;
+}
+
+#wrapper-audio .btn-function .btn-play .svg-icon {
+    width: 70px;
+}
