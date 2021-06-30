@@ -31,7 +31,7 @@ body {
     height: 250px;
     overflow: hidden;
     border-radius: 50%;
-    box-shadow: 0px 0px 1px #000;
+    box-shadow: 0px 0px 10px #00000073;
     animation: rolate 10s linear infinite;
     animation-play-state: paused;
 }
@@ -87,6 +87,23 @@ body {
     background: #8e44ad;
     display: block;
     border-radius: 2px;
+    position: relative;
+}
+
+#wrapper-audio .box-bar .bar .status::after {
+    content: "";
+    position: absolute;
+    padding: 4px;
+    right: 0px;
+    z-index: 1000;
+    background: #8e44ad;
+    top: -2px;
+    border-radius: 50%;
+    display: none;
+}
+
+#wrapper-audio .box-bar .bar:hover .status::after {
+    display: block;
 }
 
 #wrapper-audio .btn-function {
@@ -108,6 +125,8 @@ body {
     font-size: 60px;
 }
 
-#wrapper-audio .btn-function .btn-repeat.none {
+#wrapper-audio .btn-function .btn-repeat.none,
+#wrapper-audio .btn-function button.disable {
     color: #b3a8a8;
+    cursor: not-allowed;
 }
